@@ -72,7 +72,7 @@ UKF::UKF() {
 
   // Initialize weights.
   weights_ = VectorXd(n_sig_);
-      .fill(0.5 / (n_aug_ + lambda_));
+  weights_.fill(0.5 / (n_aug_ + lambda_));
   weights_(0) = lambda_ / (lambda_ + n_aug_);
 
   // Initialize measurement noice covarieance matrix
