@@ -4,8 +4,11 @@ Self-Driving Car Engineer Nanodegree Program
 In this project we utilize an Unscented Kalman Filter (UKF) to estimate the state of a moving object of interest with noisy lidar and radar measurements. UKF uses Sigma Points. Sigma Points allows us to do non linear approximation better than a linearization does for EKF. It's able to work with more sophisticated process model that is able to estimate the turn rate of the vehicle. We are using a Constant Turn Rate and Velocity Magnitude Model. 
 
 ![Alt text](images/ctrv.png?raw=true "CTRV")
+
+Reference: Udacity
 ![Alt text](images/sigma.png?raw=true "Sigma Points")
 
+Reference: Udacity
 
 UKF Workflow consists of the following steps:
 
@@ -21,11 +24,12 @@ UKF Workflow consists of the following steps:
 ###### Workflow
 
 ![Alt text](images/workflow.png?raw=true "Title")
-
+Reference: Udacity
 ##### NIS Calculation
 Normalized Innovation Squared is used to check the consistency of the filter and is given by the below formula. 
 ![Alt text](images/nis.png?raw=true "Title")
 
+Reference: Udacity
 
 This project involves a Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
@@ -45,11 +49,11 @@ For a row containing lidar data, the columns are: sensor_type, x_measured, y_mea
 Whereas radar has three measurements (rho, phi, rhodot), lidar has two measurements (x, y).
 
 
-Simulator Final State for Dataset1
+##### Simulator Final State for Dataset1
 
 ![Alt text](images/dataset1-output.png?raw=true "Title")
 
-Simulator Final State for Dataset2
+##### Simulator Final State for Dataset2
 
 ![Alt text](images/dataset2-output.png?raw=true "Title")
 
