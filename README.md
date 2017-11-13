@@ -1,9 +1,11 @@
 # Unscented Kalman Filter Project 
 Self-Driving Car Engineer Nanodegree Program
 
-In this project utilize an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
+In this project we utilize an Unscented Kalman Filter (UKF) to estimate the state of a moving object of interest with noisy lidar and radar measurements. UKF uses Sigma Points. Sigma Points allows us to do non linear approximation better than a linearization does for EKF. It's able to work with more sophisticated process model that is able to estimate the turn rate of the vehicle. We are using a Constant Turn Rate and Velocity Magnitude Model. 
 
-UKF uses Sigma Points. Sigma Points allows us to do non linear approximation better than a linearization does for EKF. It's able to work with more sophisticated process model that is able to estimate the turn rate of the vehicle. We are using a Constant Turn Rate and Velocity Magnitude Model. 
+![Alt text](images/ctrv.png?raw=true "CTRV")
+![Alt text](images/sigma.png?raw=true "Sigma Points")
+
 
 UKF Workflow consists of the following steps:
 
@@ -15,6 +17,8 @@ UKF Workflow consists of the following steps:
 ##### II. Update
 1. Predict Measurement
 2. Update State 
+
+###### Workflow
 
 ![Alt text](images/workflow.png?raw=true "Title")
 

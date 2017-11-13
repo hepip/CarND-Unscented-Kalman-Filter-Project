@@ -72,7 +72,7 @@ UKF::UKF() {
 
   // Initialize weights.
   weights_ = VectorXd(n_sig_);
-  weights_.fill(0.5 / (n_aug_ + lambda_));
+      .fill(0.5 / (n_aug_ + lambda_));
   weights_(0) = lambda_ / (lambda_ + n_aug_);
 
   // Initialize measurement noice covarieance matrix
@@ -199,7 +199,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   You'll also need to calculate the lidar NIS.
   */
 
-  // 1. Predit measurement
+  // 1. Predict measurement
   int n_z = 2;
   MatrixXd Zsig = Xsig_pred_.block(0, 0, n_z, n_sig_);
 
@@ -362,8 +362,9 @@ void UKF::NormalizeAngleOnComponent(VectorXd vector, int index) {
   while (vector(index)<-M_PI) vector(index)+=2.*M_PI;
 }
 
+
 /**
- * Predits sigma points.
+ * Predicts sigma points.
  * @param Xsig : Sigma points to predict.
  * @param delta_t : Time between k and k+1 in s
  * @param n_x : State dimension.
